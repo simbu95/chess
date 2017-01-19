@@ -22,7 +22,7 @@ public class ChessGUI extends JPanel{
             for(int j=0;j<8;j++){
                 if((i+j)%2==0){
                     g.fillRect(i*r, j*r, r, r);
-                    g.drawImage(test.getImage(), i*r+x, j*r+y, this);
+                    g.drawImage(test.getImage(), i*r, j*r,r,r, this);
                 }
             }
         }
