@@ -14,6 +14,10 @@ public class CP { //ChessPiece
     boolean[] moves;
     boolean[] attacks;
     Image icon;
+    CP(){
+       icon=null;
+       type=0;
+    }
     CP(int t,boolean c, boolean[] m,boolean[] a,String i){
         type=t;
         color=c;

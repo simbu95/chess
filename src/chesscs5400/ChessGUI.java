@@ -6,15 +6,16 @@ import javax.swing.JPanel;
 
 public class ChessGUI extends JPanel{
     CP test;
-    ChessGUI(CP p){
-        test=p;
+    CP[][] Boa;
+    Boolean Pressed=false;
+    ChessGUI(CB bo){
+        Boa=bo.Board;
     }
     @Override
     public void paintComponent(Graphics g){
         int r,R,x,y;
         if(getWidth()>getHeight()){r=getHeight()/8;R=getHeight();}
         else{r=getWidth()/8;R=getWidth();}
-        x=r/7;y=r/6;
         g.setColor(Color.white);
         g.fillRect(0, 0, R, R);
         g.setColor(Color.red);
@@ -22,10 +23,27 @@ public class ChessGUI extends JPanel{
             for(int j=0;j<8;j++){
                 if((i+j)%2==0){
                     g.fillRect(i*r, j*r, r, r);
-                    g.drawImage(test.getImage(), i*r, j*r,r,r, this);
                 }
+                if(Boa[i][j]!=null){
+                g.drawImage(Boa[i][j].getImage(), i*r, j*r,r,r, this);}
             }
         }
+    }
+    public void ProcessPress(){
+        int x=getMousePosition().x;
+        int y=getMousePosition().y;
+        int r,R;
+        if(getWidth()>getHeight()){r=getHeight()/8;R=getHeight();}
+        else{r=getWidth()/8;R=getWidth();}
+        if(x<R && y<R && x>0 && y>0){
+            
+        }
+    }
+    public void ProcessRelease(){
+        
+    }
+    public void ProcessMove(){
+        
     }
     
     
