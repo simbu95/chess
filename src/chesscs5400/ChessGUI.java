@@ -28,6 +28,9 @@ public class ChessGUI extends JPanel{
                 g.drawImage(Boa[i][j].getImage(), i*r, j*r,r,r, this);}
             }
         }
+        if(Pressed){
+            
+        }
     }
     public void ProcessPress(){
         int x=getMousePosition().x;
